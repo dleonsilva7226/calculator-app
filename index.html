@@ -11,25 +11,48 @@
     </style>
 </head>
 <body>
-    <div class = "calculator-container">
-        <input type = "text" id = "input-box" name = "input-box">
-        <button type = "button">C</button>
-        <button type = "button">&divide</button>
-        <button type = "button">&times</button>
-        <button type = "button">7</button>
-        <button type = "button">8</button>
-        <button type = "button">9</button>
-        <button type = "button">+</button>
-        <button type = "button">4</button>
-        <button type = "button">5</button>
-        <button type = "button">6</button>
-        <button type = "button">1</button>
-        <button type = "button">2</button>
-        <button type = "button">3</button>
-        <button type = "button">0</button>
-        <button type = "button">.</button>
-        <button type = "button">=</button>
-        <button type = "button">-</button>
+    <div class = "calculator-case">
+        <div class = "calculator-container">
+            <input type = "text" id = "input-box" name = "input-box">
+            <div class = "buttons-container">
+                <div class = "additional-operations">
+                    <button type = "button" class = "calc-button" id = "clear-button">C</button>
+                    <button type = "button" class = "calc-button">+/-</button>
+                    <button type = "button" class = "calc-button">%</button>
+                    <button type = "button" class = "calc-button operation-button">&divide</button>
+                </div>
+                <div class = "core-operations">
+                    <button type = "button" class = "calc-button">7</button>
+                    <button type = "button" class = "calc-button">8</button>
+                    <button type = "button" class = "calc-button">9</button>
+                    
+                    <button type = "button" class = "calc-button operation-button">&times</button>
+                    
+                </div>
+
+                <div class = "numbers">
+                    <button type = "button" class = "calc-button">4</button>
+                    <button type = "button" class = "calc-button">5</button>
+                    <button type = "button" class = "calc-button">6</button>
+                    <button type = "button" class = "calc-button operation-button">-</button>
+                </div>
+                
+                <div class = "numbers">
+                
+                    <button type = "button" class = "calc-button">1</button>
+                    <button type = "button" class = "calc-button">2</button>
+                    <button type = "button" class = "calc-button">3</button>
+                    <button type = "button" class = "calc-button operation-button">+</button>
+                
+                </div>
+
+                <div class = "numbers">
+                    <button type = "button" class = "calc-button" id = "zero-button">0</button>
+                    <button type = "button" class = "calc-button">.</button>
+                    <button type = "button" class = "calc-button operation-button" id = "equal-button">=</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="myscripts.js"></script>
 </body>
