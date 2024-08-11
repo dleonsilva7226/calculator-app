@@ -55,11 +55,6 @@ body {
     align-items: center;
     font-size: xx-large;
 }
-/* 
-#equal-button {
-    
-    height: 120px;
-} */
 
 .additional-operations {
     /* width: 70px; */
@@ -81,20 +76,9 @@ body {
     background-color: rgb(255, 143, 31);
 }
 
-.numbers {
-    /* /* height: 100px; */
-    /* height: 180px;
-    width: 200px; */
-    
+.buttons-row {
     display: flex;
-    /* flex-direction: column; */
     flex: 0 1 auto;
-    /* flex-wrap: wrap; */
-}
-
-.buttons-container {
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 #zero-button {
