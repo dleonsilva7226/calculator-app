@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    background: gray;
+    /* justify-self: center; */
+    width: 400px;
+    height: 475px;
+    border-radius: 15px;
+}
+
+#input-box {
+    background-color: skyblue;
+    margin: 15px;
+    height: 75px;
+    width: 370px; 
+    border-radius: 15px;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    font-size: xx-large;
+
+
+}
