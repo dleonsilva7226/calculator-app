@@ -54,6 +54,8 @@ body {
     justify-content: center;
     align-items: center;
     font-size: xx-large;
+    background-color: #152238;
+    color: #FAF9F6;
 }
 
 .additional-operations {
@@ -73,7 +75,7 @@ body {
 }
 
 .operation-button {
-    background-color: rgb(255, 143, 31);
+    background-color: #f48020;
 }
 
 .buttons-row {
