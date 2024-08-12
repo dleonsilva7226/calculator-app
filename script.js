@@ -1,6 +1,5 @@
 let numOne = 1;
 let numTwo = 9;
-// let operator = "+";
 const numbersArr = ["0","1","2","3","4","5","6","7","8","9", "."];
 const coreOperatorsArr = ["/", "*", "+", "-"];
 
@@ -15,10 +14,17 @@ buttons.forEach(function (button){
         if (button.innerText === "C") {
             inputValue.value = "";
             currentOperation = [];
+        } else if (button.innerText === ".") {
+            if (!inputValue.value.includes(".")) {
+                inputValue.value = inputValue.value + ".";
+            }
         } else if ((currentOperation.length == 0 || currentOperation.length == 2)) {
+            if (currentOperation.length == 2) {
+                inputValue.value = "";
+            }
             if (numbersArr.includes(button.innerText)) {
-                currentOperation.push(button.innerText);
-                inputValue.value =  button.innerText;
+                currentOperation.push(inputValue.value + button.innerText);
+                inputValue.value = inputValue.value + button.innerText;
             } 
         } else if (currentOperation.length == 1 && coreOperatorsArr.includes(button.innerText)) {
             currentOperation.push(button.innerText);
@@ -33,10 +39,10 @@ buttons.forEach(function (button){
                 currentOperation[2] = currentOperation[2] + button.innerText;
                 inputValue.value = currentOperation[2];
             }
-        } else if (currentOperation.length == 3 && button.innerText === "=") {
+        } else if (currentOperation.length === 3 && button.innerText === "=") {
             inputValue.value = operate(currentOperation[1], parseFloat(currentOperation[0]), parseFloat(currentOperation[2]));
             if (inputValue.value !== "Invalid!") {
-                inputValue.value = inputValue.value.toFixed(5);
+                inputValue.value = operate(currentOperation[1], parseFloat(currentOperation[0]), parseFloat(currentOperation[2])).toFixed(3);
             }
             currentOperation = [];
             currentOperation.push(inputValue.value);
@@ -59,14 +65,13 @@ buttons.forEach(function (button){
         } 
         else if (currentOperation.length == 2 && coreOperatorsArr.includes(button.innerText)) {
             currentOperation[1] = button.innerText;
-        } else if (button.innerText === ".") {
-            if (!inputValue.value.includes(".")) {
-                inputValue.value = inputValue.value + ".";
-            }
         }
+
         // console.log(currentOperation.toString());
     });
 });
+
+
 
 
 function operate (operator, numOne, numTwo) {
